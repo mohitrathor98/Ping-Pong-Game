@@ -17,7 +17,7 @@ TODO:
 1) Create and move a paddle == done
 2) Create another paddle == done
 3) create the ball and make it move == done
-4) Detect collision with wall and bounce
+4) Detect collision with top & bottom walls and bounce
 5) Detect collision with paddle
 6) Detect when paddle misses
 7) Keep score
