@@ -1,8 +1,6 @@
 # Ping-Pong-Game
 Ping-Pong Game using Python-Turtle
 
-(Incomplete Project)
-
 Requirements:
 
 1) Python3
