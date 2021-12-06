@@ -1,8 +1,10 @@
 from turtle import Screen, left
-from Paddle import Paddle
-from Ball import Ball
+from paddle import Paddle
+from ball import Ball
 
 import time
+
+from scoreboard import Scoreboard
 
 # screen setup
 screen = Screen()
@@ -28,6 +30,7 @@ right_paddle = Paddle((360, 0))
 left_paddle = Paddle((-360, 0))
 
 ball = Ball()
+scoreboard = Scoreboard()
 
 screen.listen()
 
