@@ -11,8 +11,11 @@ class Ball(Turtle):
         self.x_move = 10
         self.y_move = 10
         
-    def bounce_back(self):
+    def bounce_y(self):
         self.y_move *= -1 # reversing by making +ve or -ve
+        
+    def bounce_x(self):
+        self.x_move *= -1
         
     def move(self):
         new_x = self.xcor() + self.x_move
