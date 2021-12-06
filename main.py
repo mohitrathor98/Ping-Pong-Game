@@ -1,6 +1,8 @@
 from turtle import Screen, left
-import turtle
 from Paddle import Paddle
+from Ball import Ball
+
+import time
 
 # screen setup
 screen = Screen()
@@ -14,7 +16,7 @@ TODO:
 
 1) Create and move a paddle == done
 2) Create another paddle == done
-3) create the ball and make it move
+3) create the ball and make it move == done
 4) Detect collision with wall and bounce
 5) Detect collision with paddle
 6) Detect when paddle misses
@@ -25,16 +27,20 @@ TODO:
 right_paddle = Paddle((360, 0))
 left_paddle = Paddle((-360, 0))
 
-turtle.listen()
+ball = Ball()
 
-turtle.onkey(right_paddle.up, "Up")
-turtle.onkey(right_paddle.down, "Down")
+screen.listen()
 
-turtle.onkey(left_paddle.up, "w")
-turtle.onkey(left_paddle.down, "s")
+screen.onkey(right_paddle.up, "Up")
+screen.onkey(right_paddle.down, "Down")
+
+screen.onkey(left_paddle.up, "w")
+screen.onkey(left_paddle.down, "s")
 
 game_is_on = True
 while game_is_on:
     screen.update()
+    time.sleep(0.1)
+    ball.move()
 
 screen.exitonclick()
