@@ -17,7 +17,7 @@ TODO:
 1) Create and move a paddle == done
 2) Create another paddle == done
 3) create the ball and make it move == done
-4) Detect collision with top & bottom walls and bounce
+4) Detect collision with top & bottom walls and bounce == done
 5) Detect collision with paddle
 6) Detect when paddle misses
 7) Keep score
@@ -40,7 +40,12 @@ screen.onkey(left_paddle.down, "s")
 game_is_on = True
 while game_is_on:
     screen.update()
-    time.sleep(0.1)
+    time.sleep(0.05)
     ball.move()
+    
+    # detect collision with top or bottom wall
+    if ball.ycor() > 280 or ball.ycor() < -280:
+        # needs to bounce
+        ball.bounce_back()
 
 screen.exitonclick()

@@ -8,6 +8,13 @@ class Ball(Turtle):
         self.penup()
         self.color("white")
         self.shapesize(stretch_wid=1, stretch_len=1)
+        self.x_move = 10
+        self.y_move = 10
+        
+    def bounce_back(self):
+        self.y_move *= -1 # reversing by making +ve or -ve
         
     def move(self):
-        self.goto(self.xcor()+10, self.ycor()+10)
+        new_x = self.xcor() + self.x_move
+        new_y = self.ycor() + self.y_move
+        self.goto(new_x, new_y)
